@@ -3,4 +3,7 @@ name = "zero2prod"
 version = "0.1.0"
 edition = "2024"
 
+[target.x86_64-apple-darwin]
+rustflags= ["-C", "link-arg=-fuse-ld=lld"]
+
 [dependencies]
