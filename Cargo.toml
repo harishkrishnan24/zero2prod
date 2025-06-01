@@ -7,3 +7,5 @@ edition = "2024"
 rustflags= ["-C", "link-arg=-fuse-ld=lld"]
 
 [dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
