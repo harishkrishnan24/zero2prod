@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [target.x86_64-apple-darwin]
-rustflags= ["-C", "link-arg=-fuse-ld=lld"]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
 
 [lib]
 path = "src/lib.rs"
@@ -16,8 +16,10 @@ name = "zero2prod"
 [dependencies]
 actix-web = "4"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
-serde = { version = "1", features = ["derive"]}
+serde = { version = "1", features = ["derive"] }
 config = "0.14"
+uuid = { version = "1.17.0", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
 
 [dependencies.sqlx]
 version = "0.8"
